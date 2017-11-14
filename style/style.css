@@ -64,6 +64,7 @@ body {
   margin: 0 auto; }
 
 .filters {
+  height: 100vh;
   padding-right: 18px;
   float: left;
   width: 20%;
@@ -223,20 +224,21 @@ body {
     display: inline-block; }
 
 .mobile-cnt {
+  cursor: pointer;
   margin: 0 auto;
   background: black;
   color: white;
   width: 100%;
   height: 70px;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.71);
   position: fixed;
   bottom: 0px; }
   .mobile-cnt .mobile-div {
     padding-top: 26px;
     height: 100%;
-    border: 1px solid;
     text-align: center;
-    width: 50%;
+    width: 100%;
     float: left;
     display: inline-block;
     padding-left: 4px;
@@ -361,3 +363,11 @@ body {
 
 .text-center {
   text-align: center; }
+
+.filter-arrival {
+  position: relative;
+  top: 23px; }
+
+.filter-departure {
+  position: relative;
+  top: 51px; }
