@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/responsive.css">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="">
+	</head>
+	<body class="bn">
+		<div class="main-cnt">
+			<div class="flight-cnt" id="flight-id">
+				<div class="filters" id="filter-desktop">
+					<div class="filter-heading">
+						<span class="f-heading">filters</span><a class="reset-btn">reset all</a>
+					</div>
+					<div class="text-center"><button class="btn-flt-apply">Apply filters</button></div>
+					<div class="filter-prize">
+						<span>Prize min/max</span>
+						<div key="1" data-key="12" class="border-none togl">
+							<label class="switch">
+							<input type="checkbox" checked>
+							<span class="slider round prize-toggle" ></span>
+							</label>
+						</div>
+					</div>
+					<div class="filter-duration">
+						<p>Duration</p>
+						<div class="dur-time-filter duration" data-min="0.0" data-max="2.0">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&lt; 2</span><br>
+							</div>
+						</div>
+						<div class="dur-time-filter duration" data-min="2.0" data-max="3.0">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&lt; 3 hours</span>
+							</div>
+						</div>
+						<div class="dur-time-filter duration" data-min="3.0" data-max="100">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&gt; 3 hours</span>
+							</div>
+						</div>
+					</div>
+					<div class="filter-airline">
+						<p>Airline</p>
+					</div>
+					<div class="filter-arrival">
+						<p>Arrival</p>
+						<div class="filter-arr-dp ar-dp" data-min="00.00" data-max="07.00" data-key="Arrival">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> Early Morning </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="07:01" data-max="12.00" data-key="Arrival">
+							<img src="img/002-arrow.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="12.01" data-max="23.59" data-key="Arrival">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> night </span>
+							</div>
+						</div>
+					</div>
+					<div class="filter-departure">
+						<p>Departure</p>
+						<div class="filter-arr-dp ar-dp" data-min="00.00" data-max="07.00" data-key="Departure">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> Early Morning </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="07.01" data-max="12.00" data-key="Departure">
+							<img src="img/002-arrow.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="12.01" data-max="23.59" data-key="Departure">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+					-->
+				<div class="show-flights">
+					<div class="sort-cnt">
+						<div class="sort-head">
+							<div class="hone sortlistElement" >Airline</div>
+							<div class="htwo">
+								<div class="dpr-h sortlistElement" data-key="Departure">Departure</div>
+								<div class="dur-h sortlistElement" data-key="Duration">Duration</div>
+								<div class="arr-h sortlistElement" data-key="Arrival">Arrival</div>
+							</div>
+							<div class="hthree sortlistElement" data-key="Price">prize</div>
+						</div>
+						<div class="sortelement">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-cnt">
+				<div class="mobile-div m-filter" id="filter">Filter</div>
+				<div class="mobile-div m-sort" id="sort">Sort</div>
+			</div>
+		</div>
+		<!-- hidden div -->
+		<div class="hi-cnt">
+			<div class="filters hiddendiv" id="filter-mobile">
+				<div class="m-filter-close"> X </div>
+				<div class="filter-heading">
+						<span class="f-heading">filters</span><a class="reset-btn">reset all</a>
+					</div>
+					<div class="text-center"><button class="btn-flt-apply">Apply filters</button></div>
+					<div class="filter-prize">
+						<span>Prize min/max</span>
+						<div key="1" data-key="12" class="border-none togl">
+							<label class="switch">
+							<input type="checkbox" checked>
+							<span class="slider round prize-toggle" ></span>
+							</label>
+						</div>
+					</div>
+					<div class="filter-duration">
+						<p>Duration</p>
+						<div class="dur-time-filter duration" data-min="0.0" data-max="2.0">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&lt; 2</span><br>
+							</div>
+						</div>
+						<div class="dur-time-filter duration" data-min="2.0" data-max="3.0">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&lt; 3 hours</span>
+							</div>
+						</div>
+						<div class="dur-time-filter duration" data-min="3.0" data-max="100">
+							<img src="img/clock.png" alt="">
+							<div>
+								<span>&gt; 3 hours</span>
+							</div>
+						</div>
+					</div>
+					<div class="filter-airline">
+						<p>Airline</p>
+					</div>
+					<div class="filter-arrival">
+						<p>Arrival</p>
+						<div class="filter-arr-dp ar-dp" data-min="00.00" data-max="07.00" data-key="Arrival">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> Early Morning </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="07:01" data-max="12.00" data-key="Arrival">
+							<img src="img/002-arrow.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="12.01" data-max="23.59" data-key="Arrival">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> night </span>
+							</div>
+						</div>
+					</div>
+					<div class="filter-departure">
+						<p>Departure</p>
+						<div class="filter-arr-dp ar-dp" data-min="00.00" data-max="07.00" data-key="Departure">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> Early Morning </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="07.01" data-max="12.00" data-key="Departure">
+							<img src="img/002-arrow.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+						<div class="filter-arr-dp ar-dp" data-min="12.01" data-max="23.59" data-key="Departure">
+							<img src="img/003-night.png" alt="">
+							<div>
+								<span> mid-day </span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/flightview.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/flightcontroller.js"></script>
+	<script src="js/app2.js"></script>
+	<script src="js/mobile.js"></script>
+</html>
